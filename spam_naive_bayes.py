@@ -4,11 +4,7 @@ SPAM = 'spam'
 TAB_CODE = '\t'
 ALPHA = 1 
 
-"""
-reads a fil
 
-
-"""
 def read_file(filename): 
 	data = ""
 	with open(filename) as file: 
