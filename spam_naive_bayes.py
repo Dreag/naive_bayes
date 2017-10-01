@@ -79,16 +79,26 @@ def get_prob_predictions(msg, words_spam, words_ham, p_spam, p_ham):
 	else: 
 		print("False Alarm, it's delicious Ham!")
 
+
+
+def input_loop(): 
+	print("Exit the program by typing: quit")
+
+	isContinue = True
+	while isContinue: 
+		user_input = input("Enter an SMS message to determine SPAM or HAM: ")
+		if user_input == 'quit': 
+			break
+		get_prob_predictions(user_input, words_spam, words_ham, p_spam, p_ham)
+
+
+
 if __name__ == '__main__':
 	data = [line.strip() for line in read_file(SPAM_FILE)] 
 	
 	p_spam, p_ham, words_spam, words_ham, pos_count, neg_count = train_spam(data)
 
-
-
-	string = 'I HAVE A DATE ON SUNDAY WITH WILL!!'
-
-	get_prob_predictions(string, words_spam, words_ham, p_spam, p_ham)
+	input_loop()
 	
 
 
