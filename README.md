@@ -11,7 +11,7 @@ Python 3
 
 ## Usage
 
-Type `python naive_bayes.py` to run the code. 
+Type `python spam_naive_bayes.py` to run the code. 
 
 ## Future Improvements
 
